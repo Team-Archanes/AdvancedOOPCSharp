@@ -1,4 +1,7 @@
 ﻿using System;
+
+using Bejewled.View;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;

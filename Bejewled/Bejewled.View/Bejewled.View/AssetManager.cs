@@ -1,45 +1,67 @@
-﻿using System;
-using Microsoft.Xna.Framework.Audio;
+﻿using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
 
-public class AssetManager
+namespace Bejewled.View
 {
-    protected ContentManager contentManager;
+    using System.Threading;
 
-    public AssetManager(ContentManager Content)
+    public class AssetManager
     {
-        this.contentManager = Content;
-    }
+        private readonly ContentManager contentManager;
 
-    public Texture2D GetSprite(string assetName)
-    {
-        if (assetName == "")
-            return null;
-        return contentManager.Load<Texture2D>(assetName);
-    }
+        public AssetManager(ContentManager content)
+        {
+            this.contentManager = content;
+        }
 
-    public void PlaySound(string assetName)
-    {
-        SoundEffect snd = contentManager.Load<SoundEffect>(assetName);
-        snd.Play();
-    }
+        public ContentManager Content
+        {
+            get
+            {
+                return this.contentManager;
+            }
+        }
 
-    public void PlayMusic(string assetName, bool repeat = true)
-    {
-        MediaPlayer.IsRepeating = repeat;
-     
-        MediaPlayer.Play(contentManager.Load<Song>(assetName));
-    }
+        public Texture2D GetSprite(string assetName)
+        {
+            if (assetName == "") return null;
+            return this.contentManager.Load<Texture2D>(assetName);
+        }
 
-    public void Mute()
-    {
-        MediaPlayer.Stop();
-    }
+        public void PlaySound(string assetName)
+        {
+            var snd = this.contentManager.Load<SoundEffect>(assetName);
+            snd.Play();
+        }
 
-    public ContentManager Content
-    {
-        get { return contentManager; }
+        public void PlayMusic(string assetName, bool repeat = true)
+        {
+            MediaPlayer.IsRepeating = repeat;
+
+            MediaPlayer.Play(this.contentManager.Load<Song>(assetName));
+        }
+
+        public void ChangeSoundState()
+        {
+            if (MediaPlayer.IsMuted)
+            {
+                MediaPlayer.Resume();
+                MediaPlayer.IsMuted = false;
+                Thread.Sleep(500);
+            }
+            else
+            {
+                MediaPlayer.IsMuted = true;
+                MediaPlayer.Pause();
+                Thread.Sleep(500);
+            }
+        }
+
+        public bool IsMuted()
+        {
+            return MediaPlayer.IsMuted;
+        }
     }
 }

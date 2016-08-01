@@ -16,5 +16,6 @@ Content\rainbowTransClicked.xnb
 Content\yellowgemTransClicked.xnb
 Content\whitegemTransClicked.xnb
 Content\redgemTransClicked.xnb
-Content\scoreFont.xnb
 Content\explosion.xnb
+Content\scoreFont.xnb
+Content\Mute.xnb

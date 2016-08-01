@@ -1,6 +1,7 @@
 namespace Bejewled.View
 {
     using System;
+    using System.Threading;
     using System.Windows.Forms;
 
     using Bejewled.Model;
@@ -61,6 +62,8 @@ namespace Bejewled.View
         private SpriteBatch spriteBatch;
 
         private Rectangle tileRect;
+
+        private Texture2D muteButton;
 
         public BejeweledView()
         {
@@ -251,6 +254,14 @@ namespace Bejewled.View
             this.DrawScore();
             this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
             this.spriteBatch.Draw(this.hintButton, new Vector2(60, 430), null, Color.White);
+            if (this.assetManager.IsMuted())
+            {
+                this.DrawMute();
+            }
+            else
+            {
+                this.spriteBatch.Draw(this.soundButton, new Vector2(0, 0), null, Color.White);
+            }
             this.spriteBatch.Draw(this.soundButton, new Vector2(0, 0), null, Color.White);
             this.spriteBatch.End();
 
@@ -303,6 +314,7 @@ namespace Bejewled.View
             this.scoreFont = this.Content.Load<SpriteFont>("scoreFont");
             this.hintButton = this.Content.Load<Texture2D>(@"hintButton");
             this.soundButton = this.Content.Load<Texture2D>(@"soundButton");
+            this.muteButton = this.Content.Load<Texture2D>(@"Mute");
             if (this.OnLoad != null)
             {
                 this.OnLoad(this, EventArgs.Empty);
@@ -340,16 +352,8 @@ namespace Bejewled.View
             this.ExcuteAnimation(gameTime);
             if (this.CheckIfSoundButtonIsPressed())
             {
-                /*if (this.isMuted)
-                {
-                    this.assetManager.PlayMusic("snd_music");
-                    this.isMuted = false;
-                }
-                else
-                {*/
-                this.isMuted = true;
-                this.assetManager.Mute();
-                /*}*/
+                this.assetManager.ChangeSoundState();
+                
             }
             // TODO: Add your update logic here            
             base.Update(gameTime);
@@ -362,6 +366,10 @@ namespace Bejewled.View
                    && rect.Contains(this.mouseState.X, this.mouseState.Y);
         }
 
+        private void DrawMute()
+        {
+            this.spriteBatch.Draw(this.muteButton, new Vector2(0, 0), null, Color.White);
+        }
         private void ExcuteAnimation(GameTime gameTime)
         {
             this.elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
@@ -373,7 +381,8 @@ namespace Bejewled.View
                     this.frameV = 0;
                     this.frameH = 0;
                     this.counter = 0;
-                    this.OnExplosionFinished(this, EventArgs.Empty);
+                    var onOnExplosionFinished = this.OnExplosionFinished;
+                    onOnExplosionFinished?.Invoke(this, EventArgs.Empty);
                 }
                 if (this.frameH >= 12)
                 {

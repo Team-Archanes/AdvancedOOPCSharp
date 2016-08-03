@@ -1,14 +1,12 @@
-using System.Collections.Generic;
-using Bejewled.Model.Models.Preservers;
-using Bejewled.Model.Models.Scores;
-using Bejewled.Model.Scores;
-
 namespace Bejewled.View
 {
     using System;
-    using System.Threading;
     using System.Windows.Forms;
+    using System.Collections.Generic;
 
+    using Bejewled.Model.Models.Preservers;
+    using Bejewled.Model.Models.Scores;
+    using Bejewled.Model.Scores;
     using Bejewled.Model;
     using Bejewled.Model.EventArgs;
     using Bejewled.Model.Interfaces;
@@ -102,6 +100,135 @@ namespace Bejewled.View
         public int[,] Tiles { get; set; }
 
         public string Score { get; set; }
+
+        /// <summary>
+        /// Allows the game to perform any initialization it needs to before starting to run.
+        /// This is where it can query for any required services and load any non-graphic
+        /// related content.  Calling base.Initialize will enumerate through any components
+        /// and initialize them as well.
+        /// </summary>
+        protected override void Initialize()
+        {
+            // TODO: Add your initialization logic here
+            this.GameScoreManager = new ScoreManager(new Score(), new ScoreTable(new BinaryPreserver<List<Score>>()));
+            this.GameTimer = new RoundTimer();
+
+            this.presenter = new BejeweledPresenter(this, new GameBoard());
+            this.tileRect = new Rectangle(0, 0, 100, 100);
+            this.IsMouseVisible = true;
+            this.fistClickedTileCoordinates = new Point(0, 0);
+            this.isFirstClick = true;
+            base.Initialize();
+        }
+
+        /// <summary>
+        /// LoadContent will be called once per game and is the place to load
+        /// all of your content.
+        /// </summary>
+        protected override void LoadContent()
+        {
+            // Create a new SpriteBatch, which can be used to draw textures.
+            this.spriteBatch = new SpriteBatch(this.GraphicsDevice);
+            this.textureTiles[0] = this.Content.Load<Texture2D>(@"redgemTrans");
+            this.textureTiles[1] = this.Content.Load<Texture2D>(@"greengemTrans");
+            this.textureTiles[2] = this.Content.Load<Texture2D>(@"bluegemTrans");
+            this.textureTiles[3] = this.Content.Load<Texture2D>(@"yellowgemTrans");
+            this.textureTiles[4] = this.Content.Load<Texture2D>(@"purplegemTrans");
+            this.textureTiles[5] = this.Content.Load<Texture2D>(@"whitegemTrans");
+            this.textureTiles[6] = this.Content.Load<Texture2D>(@"rainbowTrans");
+            this.textureTiles[7] = this.Content.Load<Texture2D>(@"explosion");
+            this.textureTiles[10] = this.Content.Load<Texture2D>(@"bluegemTransClicked");
+            this.textureTiles[9] = this.Content.Load<Texture2D>(@"greengemTransClicked");
+            this.textureTiles[12] = this.Content.Load<Texture2D>(@"purplegemTransClicked");
+            this.textureTiles[14] = this.Content.Load<Texture2D>(@"rainbowTransClicked");
+            this.textureTiles[8] = this.Content.Load<Texture2D>(@"redgemTransClicked");
+            this.textureTiles[13] = this.Content.Load<Texture2D>(@"whitegemTransClicked");
+            this.textureTiles[11] = this.Content.Load<Texture2D>(@"yellowgemTransClicked");
+            this.grid = this.Content.Load<Texture2D>(@"boardFinal");
+            this.scoreFont = this.Content.Load<SpriteFont>("scoreFont");
+            this.hintButton = this.Content.Load<Texture2D>(@"hintButton");
+            this.soundButton = this.Content.Load<Texture2D>(@"soundButton");
+            this.muteButton = this.Content.Load<Texture2D>(@"Mute");
+            if (this.OnLoad != null)
+            {
+                this.OnLoad(this, EventArgs.Empty);
+            }
+
+            this.assetManager.PlayMusic("snd_music");
+
+            // TODO: use this.Content to load your game content here
+        }
+
+        /// <summary>
+        /// Allows the game to run logic such as updating the world,
+        /// checking for collisions, gathering input, and playing audio.
+        /// </summary>
+        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        protected override void Update(GameTime gameTime)
+        {
+            // Allows the game to exit
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            {
+                this.Exit();
+            }
+
+            if (!this.GameTimer.IsStarted)
+            {
+                this.GameTimer.Start(this.RoundTimeInSeconds, gameTime);
+            }
+            this.GameTimer.Update(gameTime);
+
+            this.mouseState = Mouse.GetState();
+            this.DetectGameBoardClick();
+            this.ExcuteAnimation(gameTime);
+            if (this.CheckIfSoundButtonIsPressed())
+            {
+                this.assetManager.ChangeSoundState();
+
+            }
+            // TODO: Add your update logic here            
+            base.Update(gameTime);
+        }
+
+        /// <summary>
+        /// This is called when the game should draw itself.
+        /// </summary>
+        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        protected override void Draw(GameTime gameTime)
+        {
+            this.GraphicsDevice.Clear(Color.CornflowerBlue);
+            this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+            this.spriteBatch.Draw(this.grid, Vector2.Zero, Color.White);
+            this.spriteBatch.End();
+            var scale = 0.5f;
+            this.DrawScore();
+            this.GameTimer.Draw(gameTime, spriteBatch, this.scoreFont);
+            this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+            this.spriteBatch.Draw(this.hintButton, new Vector2(60, 430), null, Color.White);
+            if (this.assetManager.IsMuted())
+            {
+                this.DrawMute();
+            }
+            else
+            {
+                this.spriteBatch.Draw(this.soundButton, new Vector2(0, 0), null, Color.White);
+            }
+            this.spriteBatch.Draw(this.soundButton, new Vector2(0, 0), null, Color.White);
+            this.spriteBatch.End();
+
+            // TODO: Add your drawing code here
+            base.Draw(gameTime);
+            this.DrawGameBoard();
+        }
+
+        /// <summary>
+        /// UnloadContent will be called once per game and is the place to unload
+        /// all content.
+        /// </summary>
+        protected override void UnloadContent()
+        {
+            // TODO: Unload any non ContentManager content here
+        }
 
         public void DisplayGameEndMessage()
         {
@@ -251,135 +378,6 @@ namespace Bejewled.View
                         indexX,
                         indexY));
             }
-        }
-
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Draw(GameTime gameTime)
-        {
-            this.GraphicsDevice.Clear(Color.CornflowerBlue);
-            this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
-            this.spriteBatch.Draw(this.grid, Vector2.Zero, Color.White);
-            this.spriteBatch.End();
-            var scale = 0.5f;
-            this.DrawScore();
-            this.GameTimer.Draw(gameTime, spriteBatch, this.scoreFont);
-            this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
-            this.spriteBatch.Draw(this.hintButton, new Vector2(60, 430), null, Color.White);
-            if (this.assetManager.IsMuted())
-            {
-                this.DrawMute();
-            }
-            else
-            {
-                this.spriteBatch.Draw(this.soundButton, new Vector2(0, 0), null, Color.White);
-            }
-            this.spriteBatch.Draw(this.soundButton, new Vector2(0, 0), null, Color.White);
-            this.spriteBatch.End();
-
-            // TODO: Add your drawing code here
-            base.Draw(gameTime);
-            this.DrawGameBoard();
-        }
-
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
-        protected override void Initialize()
-        {
-            // TODO: Add your initialization logic here
-            this.GameScoreManager = new ScoreManager(new Score(), new ScoreTable(new BinaryPreserver<List<Score>>()));
-            this.GameTimer = new RoundTimer();
-
-            this.presenter = new BejeweledPresenter(this, new GameBoard());
-            this.tileRect = new Rectangle(0, 0, 100, 100);
-            this.IsMouseVisible = true;
-            this.fistClickedTileCoordinates = new Point(0, 0);
-            this.isFirstClick = true;
-            base.Initialize();
-        }
-
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
-        protected override void LoadContent()
-        {
-            // Create a new SpriteBatch, which can be used to draw textures.
-            this.spriteBatch = new SpriteBatch(this.GraphicsDevice);
-            this.textureTiles[0] = this.Content.Load<Texture2D>(@"redgemTrans");
-            this.textureTiles[1] = this.Content.Load<Texture2D>(@"greengemTrans");
-            this.textureTiles[2] = this.Content.Load<Texture2D>(@"bluegemTrans");
-            this.textureTiles[3] = this.Content.Load<Texture2D>(@"yellowgemTrans");
-            this.textureTiles[4] = this.Content.Load<Texture2D>(@"purplegemTrans");
-            this.textureTiles[5] = this.Content.Load<Texture2D>(@"whitegemTrans");
-            this.textureTiles[6] = this.Content.Load<Texture2D>(@"rainbowTrans");
-            this.textureTiles[7] = this.Content.Load<Texture2D>(@"explosion");
-            this.textureTiles[10] = this.Content.Load<Texture2D>(@"bluegemTransClicked");
-            this.textureTiles[9] = this.Content.Load<Texture2D>(@"greengemTransClicked");
-            this.textureTiles[12] = this.Content.Load<Texture2D>(@"purplegemTransClicked");
-            this.textureTiles[14] = this.Content.Load<Texture2D>(@"rainbowTransClicked");
-            this.textureTiles[8] = this.Content.Load<Texture2D>(@"redgemTransClicked");
-            this.textureTiles[13] = this.Content.Load<Texture2D>(@"whitegemTransClicked");
-            this.textureTiles[11] = this.Content.Load<Texture2D>(@"yellowgemTransClicked");
-            this.grid = this.Content.Load<Texture2D>(@"boardFinal");
-            this.scoreFont = this.Content.Load<SpriteFont>("scoreFont");
-            this.hintButton = this.Content.Load<Texture2D>(@"hintButton");
-            this.soundButton = this.Content.Load<Texture2D>(@"soundButton");
-            this.muteButton = this.Content.Load<Texture2D>(@"Mute");
-            if (this.OnLoad != null)
-            {
-                this.OnLoad(this, EventArgs.Empty);
-            }
-
-            this.assetManager.PlayMusic("snd_music");
-
-            // TODO: use this.Content to load your game content here
-        }
-
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// all content.
-        /// </summary>
-        protected override void UnloadContent()
-        {
-            // TODO: Unload any non ContentManager content here
-        }
-
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Update(GameTime gameTime)
-        {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-            {
-                this.Exit();
-            }
-
-            if (!this.GameTimer.IsStarted)
-            {
-                this.GameTimer.Start(this.RoundTimeInSeconds, gameTime);
-            }
-            this.GameTimer.Update(gameTime);
-
-            this.mouseState = Mouse.GetState();
-            this.DetectGameBoardClick();
-            this.ExcuteAnimation(gameTime);
-            if (this.CheckIfSoundButtonIsPressed())
-            {
-                this.assetManager.ChangeSoundState();
-                
-            }
-            // TODO: Add your update logic here            
-            base.Update(gameTime);
         }
 
         private bool CheckIfSoundButtonIsPressed()

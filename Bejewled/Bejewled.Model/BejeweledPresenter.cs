@@ -25,15 +25,15 @@ namespace Bejewled.Model
             this.view.OnFirstTileClicked += this.OnFirstTileClicked;
             this.view.OnHintClicked += this.OnHintClicked;
             this.gameBoard.OnGameOver += this.OnGameOver;
+            this.view.GameTimer.OnGameOver += this.OnGameOver;
         }
 
         private void OnGameOver(object sender, System.EventArgs e)
         {
-            this.view.DisplayGameEndMessage();
-            this.view.Score = "0";
-
-            this.view.GameScoreManager.UpdateHighScoreTableWithCurrentScore();
             this.view.GameScoreManager.CurrentGameScore.Reset();
+            //this.view.GameScoreManager.UpdateHighScoreTableWithCurrentScore();
+
+            this.view.DisplayGameEndMessage();
         }
 
         private void OnFirstTileClicked(object sender, TileEventArgs tileEventArgs)

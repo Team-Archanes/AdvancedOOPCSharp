@@ -71,7 +71,6 @@ namespace Bejewled.View
 
         private Texture2D muteButton;
 
-        private RoundTimer timer;
         private int RoundTimeInSeconds = 10;
 
         public BejeweledView()
@@ -87,6 +86,8 @@ namespace Bejewled.View
         }
 
         public ScoreManager GameScoreManager { get; set; }
+
+        public RoundTimer GameTimer { get; set; }
 
         public event EventHandler OnLoad;
 
@@ -264,7 +265,7 @@ namespace Bejewled.View
             this.spriteBatch.End();
             var scale = 0.5f;
             this.DrawScore();
-            this.timer.Draw(gameTime, spriteBatch, this.scoreFont);
+            this.GameTimer.Draw(gameTime, spriteBatch, this.scoreFont);
             this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
             this.spriteBatch.Draw(this.hintButton, new Vector2(60, 430), null, Color.White);
             if (this.assetManager.IsMuted())
@@ -293,6 +294,7 @@ namespace Bejewled.View
         {
             // TODO: Add your initialization logic here
             this.GameScoreManager = new ScoreManager(new Score(), new ScoreTable(new BinaryPreserver<List<Score>>()));
+            this.GameTimer = new RoundTimer();
 
             this.presenter = new BejeweledPresenter(this, new GameBoard());
             this.tileRect = new Rectangle(0, 0, 100, 100);
@@ -362,11 +364,11 @@ namespace Bejewled.View
                 this.Exit();
             }
 
-            if (this.timer == null)
+            if (!this.GameTimer.IsStarted)
             {
-                this.timer = new RoundTimer(this.RoundTimeInSeconds, gameTime);
+                this.GameTimer.Start(this.RoundTimeInSeconds, gameTime);
             }
-            this.timer.Update(gameTime);
+            this.GameTimer.Update(gameTime);
 
             this.mouseState = Mouse.GetState();
             this.DetectGameBoardClick();

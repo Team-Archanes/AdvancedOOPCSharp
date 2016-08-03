@@ -1,4 +1,5 @@
-﻿using Bejewled.Model.Models.Scores;
+﻿using Bejewled.Model.Models;
+using Bejewled.Model.Models.Scores;
 
 namespace Bejewled.Model.Interfaces
 {
@@ -11,6 +12,8 @@ namespace Bejewled.Model.Interfaces
         int[,] Tiles { get; set; }
 
         ScoreManager GameScoreManager { get; set; }
+
+        RoundTimer GameTimer { get; set; }
 
         event EventHandler OnLoad;
 

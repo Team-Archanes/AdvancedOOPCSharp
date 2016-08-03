@@ -8,6 +8,8 @@
     {
         private int initialTime;
 
+        public event EventHandler OnGameOver;
+
         public int InitialTime
         {
             get
@@ -26,28 +28,41 @@
             }
         }
         public int TimeLeft { get; private set; }
+
         private double GameTimeSeconds { get; set; }
 
-        public RoundTimer(int initialTime, GameTime gameTime)
+        public bool IsStarted { get; private set; }
+
+        public RoundTimer()
         {
-            this.InitialTime = initialTime;
+            this.IsStarted = false;
+        }
+
+        public void Start(int givenInitialTime, GameTime gameTime)
+        {
+            this.InitialTime = givenInitialTime;
             this.TimeLeft = this.InitialTime;
             this.GameTimeSeconds = gameTime.TotalGameTime.TotalSeconds;
+
+            this.IsStarted = true;
         }
 
         public void Update(GameTime newGameTime)
         {
-            if (Math.Abs(newGameTime.TotalGameTime.TotalSeconds - this.GameTimeSeconds) >= 1)
+            if (this.IsStarted)
             {
-                this.TimeLeft--;
-
-                if (this.TimeLeft < 0)
+                if (Math.Abs(newGameTime.TotalGameTime.TotalSeconds - this.GameTimeSeconds) >= 1)
                 {
-                    // TODO: End game
-                    Reset();
-                }
+                    this.TimeLeft--;
 
-                this.GameTimeSeconds = newGameTime.TotalGameTime.TotalSeconds;
+                    if (this.TimeLeft < 0)
+                    {
+                        this.GameOver();
+                        Reset();
+                    }
+
+                    this.GameTimeSeconds = newGameTime.TotalGameTime.TotalSeconds;
+                }
             }
         }
 
@@ -69,6 +84,12 @@
         {
             this.InitialTime = newInitialTIme;
             this.Reset();
+        }
+
+        private void GameOver()
+        {
+            this.IsStarted = false;
+            this.OnGameOver?.Invoke(this, System.EventArgs.Empty);
         }
     }
 }

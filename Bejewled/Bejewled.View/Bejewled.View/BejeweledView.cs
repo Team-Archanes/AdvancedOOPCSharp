@@ -156,7 +156,7 @@ namespace Bejewled.View
 
             this.assetManager.PlayMusic("snd_music");
 
-            // TODO: use this.Content to load your game content here
+            this.GameScoreManager.HighScorreTable.LoadScoreTable();
         }
 
         /// <summary>

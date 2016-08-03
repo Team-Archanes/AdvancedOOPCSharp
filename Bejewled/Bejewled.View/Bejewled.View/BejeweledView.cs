@@ -71,7 +71,7 @@ namespace Bejewled.View
 
         private Texture2D muteButton;
 
-        private int RoundTimeInSeconds = 10;
+        private int RoundTimeInSeconds = 5;
 
         public BejeweledView()
         {
@@ -105,7 +105,7 @@ namespace Bejewled.View
 
         public void DisplayGameEndMessage()
         {
-            var result = MessageBox.Show("GAME OVER", "You lost this game", MessageBoxButtons.RetryCancel);
+            var result = MessageBox.Show(this.GameScoreManager.HighScorreTable.ToString(), "Game Over", MessageBoxButtons.RetryCancel);
             if (result == DialogResult.Retry)
             {
                 this.RestartGame();

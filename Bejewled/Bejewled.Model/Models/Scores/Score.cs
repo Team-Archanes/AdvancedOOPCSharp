@@ -11,6 +11,11 @@
             this.PlayerScore = 0;
         }
 
+        public Score(int score)
+        {
+            this.PlayerScore = score;
+        }
+
         public int PlayerScore { get; private set; }
 
         public void IncreaseScore()

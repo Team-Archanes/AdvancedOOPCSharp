@@ -30,8 +30,8 @@ namespace Bejewled.Model
 
         private void OnGameOver(object sender, System.EventArgs e)
         {
+            this.view.GameScoreManager.UpdateHighScoreTableWithCurrentScore();
             this.view.GameScoreManager.CurrentGameScore.Reset();
-            //this.view.GameScoreManager.UpdateHighScoreTableWithCurrentScore();
 
             this.view.DisplayGameEndMessage();
         }
@@ -65,7 +65,7 @@ namespace Bejewled.Model
 
             this.view.GameScoreManager.CurrentGameScore.IncreaseScore();
             //this.view.Score = scoreEventArgs.GainedScore;
-            //this.gameBoard.CheckForGameOver();
+            this.gameBoard.CheckForGameOver();
         }
 
         private void OnExplosionFinished(object sender, System.EventArgs e)

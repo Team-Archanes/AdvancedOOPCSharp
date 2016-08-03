@@ -15,7 +15,7 @@
 
         public void UpdateHighScoreTableWithCurrentScore()
         {
-            this.HighScorreTable.AddScore(this.CurrentGameScore);
+            this.HighScorreTable.AddScore(new Score(this.CurrentGameScore.PlayerScore));
             this.HighScorreTable.SaveScoreTable();
         }
     }

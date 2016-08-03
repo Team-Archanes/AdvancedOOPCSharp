@@ -4,7 +4,7 @@
     using Bejewled.Model.Interfaces;
 
     [Serializable]
-    public class Score : IScore
+    public class Score : IScore, IComparable<Score>
     {
         public Score()
         {
@@ -21,6 +21,16 @@
         public void Reset()
         {
             this.PlayerScore = 0;
+        }
+
+        public int CompareTo(Score other)
+        {
+            return this.PlayerScore.CompareTo(other.PlayerScore);
+        }
+
+        public override string ToString()
+        {
+            return this.PlayerScore.ToString();
         }
     }
 }

@@ -16,13 +16,16 @@ namespace Bejewled.Tests
     {
         private Mock<ITileGenerator> mock;
 
+        private Mock<IHint> mockHint;
+
         private IGameBoard gameBoard;
 
         [TestInitialize]
         public void SetUp()
         {
             this.mock = new Mock<ITileGenerator>();
-            this.gameBoard = new GameBoard(this.mock.Object);
+            this.mockHint = new Mock<IHint>();
+            this.gameBoard = new GameBoard(this.mock.Object, this.mockHint.Object);
             this.SetGameboard();
         }
 
@@ -72,16 +75,12 @@ namespace Bejewled.Tests
         public void GetHint_PossibleCombinations_ShouldPass()
         {
             this.gameBoard.InitializeGameBoard();
-            var possiblePositions = new TilePosition[]
-                                        {
-                                            new TilePosition() { X = 7, Y = 0 }, new TilePosition() { X = 5, Y = 1 },
-                                            new TilePosition() { X = 3, Y = 0 }, new TilePosition() { X = 1, Y = 0 },
-                                            new TilePosition() { X = 3, Y = 5 }, new TilePosition() { X = 1, Y = 6 },
-                                            new TilePosition() { X = 0, Y = 3 }
-                                        };
+            var expectedTile = new Tile(TileType.Red, new TilePosition() { X = 7, Y = 0 });
+            this.mockHint.Setup(h => h.GetPossibleTile(It.IsAny<ITile[,]>()))
+                .Returns(expectedTile);
 
             var tile = this.gameBoard.GetHint();
-            Assert.IsTrue(possiblePositions.Any(t => t.X == tile.Position.X && t.Y == tile.Position.Y));
+            Assert.AreEqual(expectedTile, tile);
         }
 
         [TestMethod]

@@ -21,11 +21,11 @@
 
         private ITile possibleTile;
 
-        public GameBoard(ITileGenerator tileGenerator)
+        public GameBoard(ITileGenerator tileGenerator, IHint hint)
         {
             this.gameBoard = new ITile[NumberOfRows, NumberOfColumn];
             this.tileGenerator = tileGenerator;
-            this.hint = new Hint();
+            this.hint = hint;
         }
 
         public void FirstTileClicked(ITile firstClickedTile)

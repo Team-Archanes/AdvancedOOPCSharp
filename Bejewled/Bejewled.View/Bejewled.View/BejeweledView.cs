@@ -111,7 +111,7 @@ namespace Bejewled.View
             this.GameScoreManager = new ScoreManager(new Score(), new ScoreTable(new BinaryPreserver<List<Score>>()));
             this.GameTimer = new RoundTimer();
 
-            this.presenter = new BejeweledPresenter(this, new GameBoard(new TileGenerator()));
+            this.presenter = new BejeweledPresenter(this, new GameBoard(new TileGenerator(), new Hint()));
             this.tileRect = new Rectangle(0, 0, 100, 100);
             this.IsMouseVisible = true;
             this.fistClickedTileCoordinates = new Point(0, 0);

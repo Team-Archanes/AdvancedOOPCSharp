@@ -1,3 +1,8 @@
+using System.Collections.Generic;
+using Bejewled.Model.Models.Preservers;
+using Bejewled.Model.Models.Scores;
+using Bejewled.Model.Scores;
+
 namespace Bejewled.View
 {
     using System;
@@ -81,6 +86,8 @@ namespace Bejewled.View
             this.assetManager = new AssetManager(this.Content);
         }
 
+        public ScoreManager GameScoreManager { get; set; }
+
         public event EventHandler OnLoad;
 
         public event EventHandler<TileEventArgs> OnSecondTileClicked;
@@ -111,7 +118,8 @@ namespace Bejewled.View
         public void DrawScore()
         {
             this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
-            this.spriteBatch.DrawString(this.scoreFont, "Score: " + this.Score, new Vector2(30, 120), Color.GreenYellow);
+            //this.spriteBatch.DrawString(this.scoreFont, "Score: " + this.Score, new Vector2(30, 120), Color.GreenYellow);
+            this.spriteBatch.DrawString(this.scoreFont, this.GameScoreManager.CurrentGameScore.ToString(), new Vector2(30, 120), Color.GreenYellow);
             this.spriteBatch.End();
         }
 
@@ -284,6 +292,8 @@ namespace Bejewled.View
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            this.GameScoreManager = new ScoreManager(new Score(), new ScoreTable(new BinaryPreserver<List<Score>>()));
+
             this.presenter = new BejeweledPresenter(this, new GameBoard());
             this.tileRect = new Rectangle(0, 0, 100, 100);
             this.IsMouseVisible = true;

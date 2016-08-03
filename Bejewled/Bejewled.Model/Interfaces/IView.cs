@@ -1,4 +1,6 @@
-﻿namespace Bejewled.Model.Interfaces
+﻿using Bejewled.Model.Models.Scores;
+
+namespace Bejewled.Model.Interfaces
 {
     using System;
 
@@ -7,6 +9,8 @@
     public interface IView
     {
         int[,] Tiles { get; set; }
+
+        ScoreManager GameScoreManager { get; set; }
 
         event EventHandler OnLoad;
 

@@ -114,7 +114,7 @@
 
         public event EventHandler<TileEventArgs> OnValidMove;
 
-        public event EventHandler<ScoreEventArgs> OnTileRemoved;
+        public event EventHandler OnTileRemoved;
 
         public event EventHandler OnTileFocused;
 
@@ -173,8 +173,8 @@
                         {
                             this.gameBoard[index, j].TileType = this.gameBoard[index - 1, j].TileType;
                             index--;
-                            this.score.IncreaseScore();
-                            this.TileRemoved();
+                            //this.score.IncreaseScore();
+                            //this.TileRemoved();
                             this.CheckForGameOver();
                         }
                         this.gameBoard[index, j] = this.tileGenerator.CreateRandomTile(index, j);
@@ -288,7 +288,7 @@
         {
             if (this.OnTileRemoved != null)
             {
-                this.OnTileRemoved(this, new ScoreEventArgs(this.score));
+                this.OnTileRemoved(this, System.EventArgs.Empty);
             }
         }
     }

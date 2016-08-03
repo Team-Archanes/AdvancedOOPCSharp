@@ -31,6 +31,9 @@ namespace Bejewled.Model
         {
             this.view.DisplayGameEndMessage();
             this.view.Score = "0";
+
+            this.view.GameScoreManager.UpdateHighScoreTableWithCurrentScore();
+            this.view.GameScoreManager.CurrentGameScore.Reset();
         }
 
         private void OnFirstTileClicked(object sender, TileEventArgs tileEventArgs)
@@ -55,11 +58,13 @@ namespace Bejewled.Model
             this.view.DrawGameBoard();
         }
 
-        private void OnTileRemoved(object sender, ScoreEventArgs scoreEventArgs)
+        private void OnTileRemoved(object sender, System.EventArgs e)
         {
             this.view.Tiles = this.gameBoard.GenerateNumericGameBoard();
             this.view.DrawGameBoard();
-            this.view.Score = scoreEventArgs.GainedScore;
+
+            this.view.GameScoreManager.CurrentGameScore.IncreaseScore();
+            //this.view.Score = scoreEventArgs.GainedScore;
             //this.gameBoard.CheckForGameOver();
         }
 

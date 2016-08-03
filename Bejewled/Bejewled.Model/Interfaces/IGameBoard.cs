@@ -12,7 +12,7 @@
 
         event EventHandler<TileEventArgs> OnValidMove;
 
-        event EventHandler<ScoreEventArgs> OnTileRemoved;
+        event EventHandler OnTileRemoved;
 
         event EventHandler OnTileFocused;
 

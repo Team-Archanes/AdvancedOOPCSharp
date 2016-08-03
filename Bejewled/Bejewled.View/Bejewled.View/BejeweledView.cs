@@ -7,6 +7,7 @@ namespace Bejewled.View
     using Bejewled.Model;
     using Bejewled.Model.EventArgs;
     using Bejewled.Model.Interfaces;
+    using Bejewled.Model.Models;
 
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
@@ -64,6 +65,9 @@ namespace Bejewled.View
         private Rectangle tileRect;
 
         private Texture2D muteButton;
+
+        private RoundTimer timer;
+        private int RoundTimeInSeconds = 10;
 
         public BejeweledView()
         {
@@ -252,6 +256,7 @@ namespace Bejewled.View
             this.spriteBatch.End();
             var scale = 0.5f;
             this.DrawScore();
+            this.timer.Draw(gameTime, spriteBatch, this.scoreFont);
             this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
             this.spriteBatch.Draw(this.hintButton, new Vector2(60, 430), null, Color.White);
             if (this.assetManager.IsMuted())
@@ -346,6 +351,12 @@ namespace Bejewled.View
             {
                 this.Exit();
             }
+
+            if (this.timer == null)
+            {
+                this.timer = new RoundTimer(this.RoundTimeInSeconds, gameTime);
+            }
+            this.timer.Update(gameTime);
 
             this.mouseState = Mouse.GetState();
             this.DetectGameBoardClick();

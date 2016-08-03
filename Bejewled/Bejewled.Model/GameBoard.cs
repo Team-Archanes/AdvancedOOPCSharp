@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
 
+    using Bejewled.Model.Scores;
     using Bejewled.Model.Enums;
     using Bejewled.Model.EventArgs;
     using Bejewled.Model.Interfaces;

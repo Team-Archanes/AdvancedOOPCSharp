@@ -1,7 +1,9 @@
-﻿namespace Bejewled.Model
+﻿namespace Bejewled.Model.Scores
 {
+    using System;
     using Bejewled.Model.Interfaces;
 
+    [Serializable]
     public class Score : IScore
     {
         public Score()

@@ -8,8 +8,6 @@
         {
             this.CurrentGameScore = currentGameScore;
             this.HighScorreTable = highScorreTable;
-
-            CurrentGameScore.IncreaseScore();
         }
 
         public Score CurrentGameScore { get; set; }

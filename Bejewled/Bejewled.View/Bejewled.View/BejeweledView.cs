@@ -69,7 +69,7 @@ namespace Bejewled.View
 
         private Texture2D muteButton;
 
-        private int RoundTimeInSeconds = 5;
+        private int RoundTimeInSeconds = 10;
 
         public BejeweledView()
         {
@@ -98,8 +98,6 @@ namespace Bejewled.View
         public event EventHandler OnHintClicked;
 
         public int[,] Tiles { get; set; }
-
-        public string Score { get; set; }
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -246,7 +244,6 @@ namespace Bejewled.View
         public void DrawScore()
         {
             this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
-            //this.spriteBatch.DrawString(this.scoreFont, "Score: " + this.Score, new Vector2(30, 120), Color.GreenYellow);
             this.spriteBatch.DrawString(this.scoreFont, this.GameScoreManager.CurrentGameScore.ToString(), new Vector2(30, 120), Color.GreenYellow);
             this.spriteBatch.End();
         }

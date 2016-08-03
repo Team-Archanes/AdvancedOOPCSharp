@@ -64,7 +64,6 @@ namespace Bejewled.Model
             this.view.DrawGameBoard();
 
             this.view.GameScoreManager.CurrentGameScore.IncreaseScore();
-            //this.view.Score = scoreEventArgs.GainedScore;
             this.gameBoard.CheckForGameOver();
         }
 
@@ -86,7 +85,6 @@ namespace Bejewled.Model
         private void GameLoaded(object sender, System.EventArgs eventArgs)
         {
             this.view.Tiles = this.gameBoard.InitializeGameBoard();
-            this.view.Score = "0";
         }
 
         private void SecondTileClicked(object sender, TileEventArgs tileEventArgs)

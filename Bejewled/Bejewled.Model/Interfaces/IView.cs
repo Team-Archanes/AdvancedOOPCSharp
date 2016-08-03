@@ -25,8 +25,6 @@ namespace Bejewled.Model.Interfaces
 
         event EventHandler OnHintClicked;
 
-        string Score { get; set; }
-
         void DisplayGameEndMessage();
 
         void DrawScore();

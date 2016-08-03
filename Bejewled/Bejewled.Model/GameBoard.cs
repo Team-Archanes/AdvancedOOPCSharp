@@ -22,14 +22,11 @@
 
         private ITile possibleTile;
 
-        private IScore score;
-
         public GameBoard()
         {
             this.gameBoard = new ITile[NumberOfRows, NumberOfColumn];
             this.tileGenerator = new TileGenerator();
             this.hint = new Hint();
-            this.score = new Score();
         }
 
         public void FirstTileClicked(ITile firstClickedTile)
@@ -58,7 +55,6 @@
                 if (this.OnGameOver != null)
                 {
                     this.OnGameOver(this, System.EventArgs.Empty);
-                    this.score = new Score();
                 }
             }
         }
@@ -173,7 +169,6 @@
                         {
                             this.gameBoard[index, j].TileType = this.gameBoard[index - 1, j].TileType;
                             index--;
-                            //this.score.IncreaseScore();
                             //this.TileRemoved();
                             this.CheckForGameOver();
                         }

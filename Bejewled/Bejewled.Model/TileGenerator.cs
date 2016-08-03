@@ -5,11 +5,11 @@
     using Bejewled.Model.Enums;
     using Bejewled.Model.Interfaces;
 
-    public class TileGenerator
+    public class TileGenerator : ITileGenerator
     {
         private readonly Random rand;
 
-        public TileGenerator()
+        public TileGenerator() 
         {
             this.rand = new Random();
         }

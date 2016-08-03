@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
 
-    using Bejewled.Model.Scores;
     using Bejewled.Model.Enums;
     using Bejewled.Model.EventArgs;
     using Bejewled.Model.Interfaces;
@@ -18,14 +17,14 @@
 
         private readonly IHint hint;
 
-        private readonly TileGenerator tileGenerator;
+        private readonly ITileGenerator tileGenerator;
 
         private ITile possibleTile;
 
-        public GameBoard()
+        public GameBoard(ITileGenerator tileGenerator)
         {
             this.gameBoard = new ITile[NumberOfRows, NumberOfColumn];
-            this.tileGenerator = new TileGenerator();
+            this.tileGenerator = tileGenerator;
             this.hint = new Hint();
         }
 
@@ -46,17 +45,6 @@
             this.GameOver();
             this.FirstTileClicked(this.possibleTile);
             return this.possibleTile;
-        }
-
-        private void GameOver()
-        {
-            if (this.possibleTile == null)
-            {
-                if (this.OnGameOver != null)
-                {
-                    this.OnGameOver(this, System.EventArgs.Empty);
-                }
-            }
         }
 
         public void NormalizeFocusedTile(ITile firstClickedTile)
@@ -201,6 +189,17 @@
             this.possibleTile = this.hint.GetPossibleTile(this.gameBoard);
             this.GameOver();
             this.possibleTile = null;
+        }
+
+        private void GameOver()
+        {
+            if (this.possibleTile == null)
+            {
+                if (this.OnGameOver != null)
+                {
+                    this.OnGameOver(this, System.EventArgs.Empty);
+                }
+            }
         }
 
         private void ValidMoveMade(ITile firstClickedTile, ITile secondClickedTile)

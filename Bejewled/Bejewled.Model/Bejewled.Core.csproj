@@ -70,6 +70,7 @@
     <Compile Include="Interfaces\IPreserver.cs" />
     <Compile Include="Interfaces\IScore.cs" />
     <Compile Include="Interfaces\ITile.cs" />
+    <Compile Include="Interfaces\ITileGenerator.cs" />
     <Compile Include="Interfaces\IView.cs" />
     <Compile Include="Models\Preservers\BinaryPreserver.cs" />
     <Compile Include="Models\RoundTimer.cs" />

@@ -2,6 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
 
     using Bejewled.Model.Interfaces;
     using Bejewled.Model.Scores;
@@ -42,7 +44,7 @@
             }
             catch (Exception)
             {
-                Console.WriteLine("Failed to load score table!");
+                this.scoreCollection = new List<Score>();
             }
         }
 
@@ -63,19 +65,50 @@
             }
         }
 
-        public void PrintScores()
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch, SpriteFont font)
         {
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+
+            spriteBatch.DrawString(font, "High Scores:", new Vector2(30, 180), Color.GreenYellow);
+
+            int y = 200;
             if (this.scoreCollection.Count != 0)
             {
                 for (int i = 0; i < this.scoreCollection.Count; i++)
                 {
-                    Console.WriteLine($"{i + 1}: {this.scoreCollection[i]}");
+                    Console.WriteLine();
+                    spriteBatch.DrawString(font, $"{i + 1}: {this.scoreCollection[i]}", new Vector2(30, y), Color.GreenYellow);
+
+                    y += 20;
                 }
             }
             else
             {
-                Console.WriteLine("There are no scores available.");
+                spriteBatch.DrawString(font, $"None available.", new Vector2(30, y), Color.GreenYellow);
             }
+
+            spriteBatch.End();
+        }
+
+        public override string ToString()
+        {
+            string output = "High Scores:";
+
+            if (this.scoreCollection.Count != 0)
+            {
+                for (int i = 0; i < this.scoreCollection.Count; i++)
+                {
+                    output += Environment.NewLine;
+                    output += $"{i + 1}: {this.scoreCollection[i]}";
+                }
+            }
+            else
+            {
+                output += Environment.NewLine;
+                output += $"None available.";
+            }
+
+            return output;
         }
     }
 }

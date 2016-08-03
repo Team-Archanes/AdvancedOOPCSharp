@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\boardFinal.xnb</Output>
-      <Time>2016-08-03T16:44:21.2563272+03:00</Time>
+      <Time>2016-08-03T21:30:29.9961041+03:00</Time>
     </Item>
     <Item>
       <Source>greengemTrans.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\greengemTrans.xnb</Output>
-      <Time>2016-08-03T16:44:21.2588293+03:00</Time>
+      <Time>2016-08-03T21:30:29.9981059+03:00</Time>
     </Item>
     <Item>
       <Source>bluegemTrans.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\bluegemTrans.xnb</Output>
-      <Time>2016-08-03T16:44:21.2548265+03:00</Time>
+      <Time>2016-08-03T21:30:29.9946034+03:00</Time>
     </Item>
     <Item>
       <Source>purplegemTrans.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\purplegemTrans.xnb</Output>
-      <Time>2016-08-03T16:44:21.2623318+03:00</Time>
+      <Time>2016-08-03T21:30:30.0021087+03:00</Time>
     </Item>
     <Item>
       <Source>rainbowTrans.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\rainbowTrans.xnb</Output>
-      <Time>2016-08-03T16:44:21.2628318+03:00</Time>
+      <Time>2016-08-03T21:30:30.0026088+03:00</Time>
     </Item>
     <Item>
       <Source>redgemTrans.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\redgemTrans.xnb</Output>
-      <Time>2016-08-03T16:44:21.2638329+03:00</Time>
+      <Time>2016-08-03T21:30:30.0036098+03:00</Time>
     </Item>
     <Item>
       <Source>whitegemTrans.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\whitegemTrans.xnb</Output>
-      <Time>2016-08-03T16:44:21.3424103+03:00</Time>
+      <Time>2016-08-03T21:30:30.0827007+03:00</Time>
     </Item>
     <Item>
       <Source>yellowgemTrans.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\yellowgemTrans.xnb</Output>
-      <Time>2016-08-03T16:44:21.343411+03:00</Time>
+      <Time>2016-08-03T21:30:30.0837014+03:00</Time>
     </Item>
     <Item>
       <Source>hintButton.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\hintButton.xnb</Output>
-      <Time>2016-08-03T16:44:21.2593297+03:00</Time>
+      <Time>2016-08-03T21:30:29.9986062+03:00</Time>
     </Item>
     <Item>
       <Source>emptyTrans.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\emptyTrans.xnb</Output>
-      <Time>2016-08-03T16:44:21.2568279+03:00</Time>
+      <Time>2016-08-03T21:30:29.9966045+03:00</Time>
     </Item>
     <Item>
       <Source>soundButton.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\soundButton.xnb</Output>
-      <Time>2016-08-03T16:44:21.3389059+03:00</Time>
+      <Time>2016-08-03T21:30:30.0786972+03:00</Time>
     </Item>
     <Item>
       <Source>bluegemTransClicked.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\bluegemTransClicked.xnb</Output>
-      <Time>2016-08-03T16:44:21.2553268+03:00</Time>
+      <Time>2016-08-03T21:30:29.9951034+03:00</Time>
     </Item>
     <Item>
       <Source>greengemTransClicked.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\greengemTransClicked.xnb</Output>
-      <Time>2016-08-03T16:44:21.2593297+03:00</Time>
+      <Time>2016-08-03T21:30:29.9986062+03:00</Time>
     </Item>
     <Item>
       <Source>purplegemTransClicked.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\purplegemTransClicked.xnb</Output>
-      <Time>2016-08-03T16:44:21.2623318+03:00</Time>
+      <Time>2016-08-03T21:30:30.0021087+03:00</Time>
     </Item>
     <Item>
       <Source>rainbowTransClicked.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\rainbowTransClicked.xnb</Output>
-      <Time>2016-08-03T16:44:21.2633322+03:00</Time>
+      <Time>2016-08-03T21:30:30.0031091+03:00</Time>
     </Item>
     <Item>
       <Source>yellowgemTransClicked.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\yellowgemTransClicked.xnb</Output>
-      <Time>2016-08-03T16:44:21.3439113+03:00</Time>
+      <Time>2016-08-03T21:30:30.0842024+03:00</Time>
     </Item>
     <Item>
       <Source>whitegemTransClicked.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\whitegemTransClicked.xnb</Output>
-      <Time>2016-08-03T16:44:21.3429106+03:00</Time>
+      <Time>2016-08-03T21:30:30.0827007+03:00</Time>
     </Item>
     <Item>
       <Source>redgemTransClicked.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\redgemTransClicked.xnb</Output>
-      <Time>2016-08-03T16:44:21.2648394+03:00</Time>
+      <Time>2016-08-03T21:30:30.0041098+03:00</Time>
     </Item>
     <Item>
       <Source>explosion.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\explosion.xnb</Output>
-      <Time>2016-08-03T16:44:21.258329+03:00</Time>
+      <Time>2016-08-03T21:30:29.9976052+03:00</Time>
     </Item>
     <Item>
       <Source>Mute.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\Mute.xnb</Output>
-      <Time>2016-08-03T16:44:21.2518243+03:00</Time>
+      <Time>2016-08-03T21:30:29.9911009+03:00</Time>
     </Item>
     <Item>
       <Source>scoreFont.spritefont</Source>
@@ -188,7 +188,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\scoreFont.xnb</Output>
-      <Time>2016-08-03T16:44:21.2648394+03:00</Time>
+      <Time>2016-08-03T21:30:30.0046102+03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

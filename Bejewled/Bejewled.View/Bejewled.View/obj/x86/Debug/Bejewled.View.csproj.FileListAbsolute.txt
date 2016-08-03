@@ -298,16 +298,6 @@ C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.V
 C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Bejewled.View.exe
 C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Bejewled.View.pdb
-C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.dll
-C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.xml
-C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
 C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\Mute.xnb
 D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\boardFinal.xnb
 D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\greengemTrans.xnb
@@ -348,3 +338,17 @@ D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\A
 D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Bejewled.View.exe
 D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Bejewled.View.pdb
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\ClassicModeActive.xnb
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\ClassicModeDisabled.xnb
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\TimeModeActive.xnb
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\TimeModeDisabled.xnb
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml

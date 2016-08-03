@@ -190,6 +190,42 @@
       <Output>C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\scoreFont.xnb</Output>
       <Time>2016-08-04T00:38:26.9746348+03:00</Time>
     </Item>
+    <Item>
+      <Source>ClassicModeActive.png</Source>
+      <Name>ClassicModeActive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\ClassicModeActive.xnb</Output>
+      <Time>2016-08-04T01:57:17.1344325+03:00</Time>
+    </Item>
+    <Item>
+      <Source>ClassicModeDisabled.png</Source>
+      <Name>ClassicModeDisabled</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\ClassicModeDisabled.xnb</Output>
+      <Time>2016-08-04T01:57:22.8172934+03:00</Time>
+    </Item>
+    <Item>
+      <Source>TimeModeActive.png</Source>
+      <Name>TimeModeActive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\TimeModeActive.xnb</Output>
+      <Time>2016-08-04T01:57:16.8455521+03:00</Time>
+    </Item>
+    <Item>
+      <Source>TimeModeDisabled.png</Source>
+      <Name>TimeModeDisabled</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\TimeModeDisabled.xnb</Output>
+      <Time>2016-08-04T01:57:17.2760823+03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{59FB6C3E-E183-46E3-A02B-3DB914C166D9}</ContentProjectGUID>

@@ -1,16 +1,16 @@
 namespace Bejewled.View
 {
     using System;
-    using System.Windows.Forms;
     using System.Collections.Generic;
+    using System.Windows.Forms;
 
-    using Bejewled.Model.Models.Preservers;
-    using Bejewled.Model.Models.Scores;
-    using Bejewled.Model.Scores;
     using Bejewled.Model;
     using Bejewled.Model.EventArgs;
     using Bejewled.Model.Interfaces;
     using Bejewled.Model.Models;
+    using Bejewled.Model.Models.Preservers;
+    using Bejewled.Model.Models.Scores;
+    using Bejewled.Model.Scores;
 
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
@@ -28,6 +28,10 @@ namespace Bejewled.View
         private readonly GraphicsDeviceManager graphics;
 
         private readonly Texture2D[] textureTiles;
+
+        private Texture2D classicModeActive;
+
+        private Texture2D classicModeDisabled;
 
         private Rectangle clickableArea = new Rectangle(240, 40, 525, 525);
 
@@ -53,9 +57,13 @@ namespace Bejewled.View
 
         private MouseState mouseState;
 
+        private Texture2D muteButton;
+
         private BejeweledPresenter presenter;
 
         private MouseState prevMouseState = Mouse.GetState();
+
+        private readonly int RoundTimeInSeconds = 10;
 
         private SpriteFont scoreFont;
 
@@ -67,9 +75,9 @@ namespace Bejewled.View
 
         private Rectangle tileRect;
 
-        private Texture2D muteButton;
+        private Texture2D timeModeActive;
 
-        private int RoundTimeInSeconds = 10;
+        private Texture2D timeModeDisabled;
 
         public BejeweledView()
         {
@@ -98,6 +106,77 @@ namespace Bejewled.View
         public event EventHandler OnHintClicked;
 
         public int[,] Tiles { get; set; }
+
+        public void DisplayGameEndMessage()
+        {
+            var result = MessageBox.Show(
+                this.GameScoreManager.HighScorreTable.ToString(),
+                "Game Over",
+                MessageBoxButtons.RetryCancel);
+            if (result == DialogResult.Retry)
+            {
+                this.RestartGame();
+            }
+            if (result == DialogResult.Cancel)
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        public void DrawScore()
+        {
+            this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+            this.spriteBatch.DrawString(
+                this.scoreFont,
+                this.GameScoreManager.CurrentGameScore.ToString(),
+                new Vector2(30, 120),
+                Color.GreenYellow);
+            this.spriteBatch.End();
+        }
+
+        public void DrawGameBoard()
+        {
+            this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+            float x = 50;
+            for (var i = 0; i < this.Tiles.GetLength(0); i++)
+            {
+                float y = 250;
+                for (var j = 0; j < this.Tiles.GetLength(1); j++)
+                {
+                    if (this.Tiles[i, j] == 7)
+                    {
+                        this.spriteBatch.Draw(
+                            this.textureTiles[this.Tiles[i, j]],
+                            new Vector2(y, x),
+                            this.sourceRectangle,
+                            Color.White,
+                            0f,
+                            Vector2.Zero,
+                            0.5f,
+                            SpriteEffects.None,
+                            0);
+                    }
+                    else
+                    {
+                        this.spriteBatch.Draw(
+                            this.textureTiles[this.Tiles[i, j]],
+                            new Vector2(y, x),
+                            new Rectangle(0, 0, 100, 100),
+                            Color.White,
+                            0f,
+                            Vector2.Zero,
+                            0.5f,
+                            SpriteEffects.None,
+                            0);
+                    }
+
+                    y += 65;
+                }
+
+                x += 65;
+            }
+            this.spriteBatch.End();
+        }
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -147,6 +226,10 @@ namespace Bejewled.View
             this.hintButton = this.Content.Load<Texture2D>(@"hintButton");
             this.soundButton = this.Content.Load<Texture2D>(@"soundButton");
             this.muteButton = this.Content.Load<Texture2D>(@"Mute");
+            this.classicModeActive = this.Content.Load<Texture2D>(@"ClassicModeActive");
+            this.classicModeDisabled = this.Content.Load<Texture2D>(@"ClassicModeDisabled");
+            this.timeModeActive = this.Content.Load<Texture2D>(@"TimeModeActive");
+            this.timeModeDisabled = this.Content.Load<Texture2D>(@"TimeModeDisabled");
             if (this.OnLoad != null)
             {
                 this.OnLoad(this, EventArgs.Empty);
@@ -182,7 +265,6 @@ namespace Bejewled.View
             if (this.CheckIfSoundButtonIsPressed())
             {
                 this.assetManager.ChangeSoundState();
-
             }
             // TODO: Add your update logic here            
             base.Update(gameTime);
@@ -200,9 +282,11 @@ namespace Bejewled.View
             this.spriteBatch.End();
             var scale = 0.5f;
             this.DrawScore();
-            this.GameTimer.Draw(gameTime, spriteBatch, this.scoreFont);
+            this.GameTimer.Draw(gameTime, this.spriteBatch, this.scoreFont);
             this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
             this.spriteBatch.Draw(this.hintButton, new Vector2(60, 430), null, Color.White);
+            this.spriteBatch.Draw(this.timeModeDisabled, new Vector2(20, 360), null, Color.White);
+            this.spriteBatch.Draw(this.classicModeActive, new Vector2(105, 360), null, Color.White);
             if (this.assetManager.IsMuted())
             {
                 this.DrawMute();
@@ -226,70 +310,6 @@ namespace Bejewled.View
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
-        }
-
-        public void DisplayGameEndMessage()
-        {
-            var result = MessageBox.Show(this.GameScoreManager.HighScorreTable.ToString(), "Game Over", MessageBoxButtons.RetryCancel);
-            if (result == DialogResult.Retry)
-            {
-                this.RestartGame();
-            }
-            if (result == DialogResult.Cancel)
-            {
-                Environment.Exit(0);
-            }
-        }
-
-        public void DrawScore()
-        {
-            this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
-            this.spriteBatch.DrawString(this.scoreFont, this.GameScoreManager.CurrentGameScore.ToString(), new Vector2(30, 120), Color.GreenYellow);
-            this.spriteBatch.End();
-        }
-
-        public void DrawGameBoard()
-        {
-            this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
-            float x = 50;
-            for (var i = 0; i < this.Tiles.GetLength(0); i++)
-            {
-                float y = 250;
-                for (var j = 0; j < this.Tiles.GetLength(1); j++)
-                {
-                    if (this.Tiles[i, j] == 7)
-                    {
-                        this.spriteBatch.Draw(
-                            this.textureTiles[this.Tiles[i, j]],
-                            new Vector2(y, x),
-                            this.sourceRectangle,
-                            Color.White,
-                            0f,
-                            Vector2.Zero,
-                            0.5f,
-                            SpriteEffects.None,
-                            0);
-                    }
-                    else
-                    {
-                        this.spriteBatch.Draw(
-                            this.textureTiles[this.Tiles[i, j]],
-                            new Vector2(y, x),
-                            new Rectangle(0, 0, 100, 100),
-                            Color.White,
-                            0f,
-                            Vector2.Zero,
-                            0.5f,
-                            SpriteEffects.None,
-                            0);
-                    }
-
-                    y += 65;
-                }
-
-                x += 65;
-            }
-            this.spriteBatch.End();
         }
 
         private void DetectHintClick()
@@ -388,6 +408,7 @@ namespace Bejewled.View
         {
             this.spriteBatch.Draw(this.muteButton, new Vector2(0, 0), null, Color.White);
         }
+
         private void ExcuteAnimation(GameTime gameTime)
         {
             this.elapsed += (float)gameTime.ElapsedGameTime.TotalMilliseconds;

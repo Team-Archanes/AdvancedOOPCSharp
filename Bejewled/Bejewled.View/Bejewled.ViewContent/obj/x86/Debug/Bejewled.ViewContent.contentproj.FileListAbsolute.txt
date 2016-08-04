@@ -11,3 +11,4 @@ C:\Users\SilentAngel\Desktop\Team-Archanes-CSharp-OOPBasics\Bejewled\Bejewled.Vi
 C:\Users\SilentAngel\Desktop\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.ViewContent\obj\x86\Debug\Bejewled.ViewContent.contentprojResolveAssemblyReference.cache
 D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.ViewContent\obj\x86\Debug\Bejewled.ViewContent.contentprojResolveAssemblyReference.cache
 C:\Users\Villy\Desktop\3\Bejewled\Bejewled.View\Bejewled.ViewContent\obj\x86\Debug\Bejewled.ViewContent.contentprojResolveAssemblyReference.cache
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.ViewContent\obj\x86\Debug\Bejewled.ViewContent.contentprojResolveAssemblyReference.cache

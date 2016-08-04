@@ -180,3 +180,19 @@ C:\Users\Villy\Desktop\3\Bejewled\Bejewled.Model\obj\x86\Debug\Bejewled.Core.csp
 C:\Users\Villy\Desktop\3\Bejewled\Bejewled.Model\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Villy\Desktop\3\Bejewled\Bejewled.Model\obj\x86\Debug\Bejewled.Model.dll
 C:\Users\Villy\Desktop\3\Bejewled\Bejewled.Model\obj\x86\Debug\Bejewled.Model.pdb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Bejewled.Model.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Bejewled.Model.pdb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Microsoft.Xna.Framework.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Microsoft.Xna.Framework.xml
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\obj\x86\Debug\Bejewled.Core.csprojResolveAssemblyReference.cache
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\obj\x86\Debug\Bejewled.Model.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.Model\obj\x86\Debug\Bejewled.Model.pdb

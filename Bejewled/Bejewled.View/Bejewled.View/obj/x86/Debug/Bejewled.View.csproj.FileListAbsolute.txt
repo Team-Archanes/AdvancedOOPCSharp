@@ -399,3 +399,46 @@ D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\A
 D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\ClassicModeDisabled.xnb
 D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\TimeModeActive.xnb
 D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\TimeModeDisabled.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\boardFinal.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\greengemTrans.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\bluegemTrans.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\purplegemTrans.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\rainbowTrans.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\redgemTrans.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\whitegemTrans.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\yellowgemTrans.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\hintButton.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\emptyTrans.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\soundButton.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\bluegemTransClicked.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\greengemTransClicked.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\purplegemTransClicked.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\rainbowTransClicked.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\yellowgemTransClicked.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\whitegemTransClicked.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\redgemTransClicked.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\explosion.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\Mute.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\ClassicModeActive.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\ClassicModeDisabled.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\TimeModeActive.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\TimeModeDisabled.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\scoreFont.xnb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Bejewled.View.exe
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Bejewled.View.pdb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Bejewled.Model.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Bejewled.Model.pdb
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.xml
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Bejewled.View.csprojResolveAssemblyReference.cache
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Bejewled.View.exe
+E:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\latest\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Bejewled.View.pdb

@@ -60,7 +60,7 @@
             spriteBatch.DrawString(
                 font,
                 $"Target {this.currentScoreGoal}",
-                new Vector2(30, 160),
+                new Vector2(30, 150),
                 Color.GreenYellow);
 
             spriteBatch.End();

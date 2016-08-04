@@ -143,7 +143,7 @@ namespace Bejewled.View
             this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
             this.spriteBatch.DrawString(
                 this.scoreFont,
-                this.GameScoreManager.CurrentGameScore.ToString(),
+                "Score: " + this.GameScoreManager.CurrentGameScore.ToString(),
                 new Vector2(30, 210),
                 Color.GreenYellow);
             this.spriteBatch.End();

@@ -41,10 +41,30 @@
 
         public ITile GetHint()
         {
-            this.possibleTile = this.hint.GetPossibleTile(this.gameBoard);
-            this.GameOver();
-            this.FirstTileClicked(this.possibleTile);
-            return this.possibleTile;
+            var isHintPresent = this.IsHintPresent();
+            if (!isHintPresent)
+            {
+                this.possibleTile = this.hint.GetPossibleTile(this.gameBoard);
+                this.GameOver();
+                this.FirstTileClicked(this.possibleTile);
+                return this.possibleTile;
+            }
+            return this.gameBoard[0, 0];
+        }
+
+        private bool IsHintPresent()
+        {
+            for (int i = 0; i < this.gameBoard.GetLength(0); i++)
+            {
+                for (int column = 0; column < this.gameBoard.GetLength(1); column++)
+                {
+                    if ((int)this.gameBoard[i, column].TileType >= 7)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
 
         public void NormalizeFocusedTile(ITile firstClickedTile)

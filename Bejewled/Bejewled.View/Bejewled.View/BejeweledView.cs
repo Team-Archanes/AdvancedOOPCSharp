@@ -111,11 +111,20 @@ namespace Bejewled.View
         {
             var result = MessageBox.Show(
                 this.GameScoreManager.HighScorreTable.ToString(),
-                "Game Over",
-                MessageBoxButtons.RetryCancel);
-            if (result == DialogResult.Retry)
+                "Game Over: Play again (YES), Try new level (NO), Exit (CANCEL)",
+                MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
             {
                 this.RestartGame();
+            }
+
+            if (result == DialogResult.No)
+            {
+                this.RestartGame();//add logic here
+            }
+            if (result == DialogResult.Cancel)
+            {
+                Environment.Exit(0);
             }
             if (result == DialogResult.Cancel)
             {

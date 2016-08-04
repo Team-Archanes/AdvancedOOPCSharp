@@ -18,8 +18,8 @@ Content\whitegemTransClicked.xnb
 Content\redgemTransClicked.xnb
 Content\explosion.xnb
 Content\Mute.xnb
-Content\scoreFont.xnb
 Content\ClassicModeActive.xnb
 Content\ClassicModeDisabled.xnb
 Content\TimeModeActive.xnb
 Content\TimeModeDisabled.xnb
+Content\scoreFont.xnb

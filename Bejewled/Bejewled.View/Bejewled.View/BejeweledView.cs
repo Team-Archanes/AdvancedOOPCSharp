@@ -63,7 +63,11 @@ namespace Bejewled.View
 
         private MouseState prevMouseState = Mouse.GetState();
 
-        private readonly int RoundTimeInSeconds = 10;
+        private readonly int RoundTimeInSeconds = 20;
+
+        private readonly int AddedTimeOnMatch = 5;
+
+        private readonly int InitialScore = 150;
 
         private SpriteFont scoreFont;
 
@@ -94,6 +98,8 @@ namespace Bejewled.View
         public ScoreManager GameScoreManager { get; set; }
 
         public RoundTimer GameTimer { get; set; }
+
+        public LevelManager GameLevelManager { get; set; }
 
         public event EventHandler OnLoad;
 
@@ -138,7 +144,7 @@ namespace Bejewled.View
             this.spriteBatch.DrawString(
                 this.scoreFont,
                 this.GameScoreManager.CurrentGameScore.ToString(),
-                new Vector2(30, 120),
+                new Vector2(30, 210),
                 Color.GreenYellow);
             this.spriteBatch.End();
         }
@@ -198,6 +204,7 @@ namespace Bejewled.View
             // TODO: Add your initialization logic here
             this.GameScoreManager = new ScoreManager(new Score(), new ScoreTable(new BinaryPreserver<List<Score>>()));
             this.GameTimer = new RoundTimer();
+            this.GameLevelManager = new LevelManager(this.GameScoreManager, this.GameTimer, InitialScore, AddedTimeOnMatch);
 
             this.presenter = new BejeweledPresenter(this, new GameBoard(new TileGenerator(), new Hint()));
             this.tileRect = new Rectangle(0, 0, 100, 100);
@@ -267,6 +274,7 @@ namespace Bejewled.View
                 this.GameTimer.Start(this.RoundTimeInSeconds, gameTime);
             }
             this.GameTimer.Update(gameTime);
+            this.GameLevelManager.Update(gameTime);
 
             this.mouseState = Mouse.GetState();
             this.DetectGameBoardClick();
@@ -291,7 +299,10 @@ namespace Bejewled.View
             this.spriteBatch.End();
             var scale = 0.5f;
             this.DrawScore();
+
             this.GameTimer.Draw(gameTime, this.spriteBatch, this.scoreFont);
+            this.GameLevelManager.Draw(gameTime, this.spriteBatch, this.scoreFont);
+
             this.spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
             this.spriteBatch.Draw(this.hintButton, new Vector2(60, 430), null, Color.White);
             this.spriteBatch.Draw(this.timeModeDisabled, new Vector2(20, 360), null, Color.White);

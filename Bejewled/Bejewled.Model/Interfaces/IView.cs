@@ -15,6 +15,8 @@ namespace Bejewled.Model.Interfaces
 
         RoundTimer GameTimer { get; set; }
 
+        LevelManager GameLevelManager { get; set; }
+
         event EventHandler OnLoad;
 
         event EventHandler<TileEventArgs> OnSecondTileClicked;

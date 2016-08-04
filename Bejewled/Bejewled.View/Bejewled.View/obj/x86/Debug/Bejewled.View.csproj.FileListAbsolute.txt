@@ -395,3 +395,7 @@ C:\Users\Villy\Desktop\3\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Beje
 C:\Users\Villy\Desktop\3\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Villy\Desktop\3\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Bejewled.View.exe
 C:\Users\Villy\Desktop\3\Bejewled\Bejewled.View\Bejewled.View\obj\x86\Debug\Bejewled.View.pdb
+D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\ClassicModeActive.xnb
+D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\ClassicModeDisabled.xnb
+D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\TimeModeActive.xnb
+D:\SoftUni\03. C# Development\C# Fundamentals\C# OOP Advanced\98. Team Project\AdvancedOOPCSharp\Bejewled\Bejewled.View\Bejewled.View\bin\x86\Debug\Content\TimeModeDisabled.xnb

@@ -32,6 +32,7 @@ namespace Bejewled.Model
         {
             this.view.GameScoreManager.UpdateHighScoreTableWithCurrentScore();
             this.view.GameScoreManager.CurrentGameScore.Reset();
+            this.view.GameLevelManager.Reset();
 
             this.view.DisplayGameEndMessage();
         }

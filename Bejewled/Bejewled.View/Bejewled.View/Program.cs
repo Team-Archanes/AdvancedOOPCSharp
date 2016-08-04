@@ -1,23 +1,13 @@
-using Microsoft.Xna.Framework;
-
 namespace Bejewled.View
 {
-    using Microsoft.Xna.Framework.Content;
-
     class Program : GameEnvironment
     {
-
-        private static void Main(string[] args)
+        private static void Main()
         {
             using (var game = new BejeweledView())
             {
                 game.Run();
             }
-
-
-
-
-
         }      
     }
 }

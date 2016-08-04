@@ -47,6 +47,11 @@
             this.IsStarted = true;
         }
 
+        public void AddAdditionalTime(int time)
+        {
+            this.TimeLeft += time;
+        }
+
         public void Update(GameTime newGameTime)
         {
             if (this.IsStarted)
@@ -70,7 +75,7 @@
         {
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
 
-            spriteBatch.DrawString(font, "Time Left: " + this.TimeLeft, new Vector2(30, 160), Color.GreenYellow);
+            spriteBatch.DrawString(font, "Time Left: " + this.TimeLeft, new Vector2(30, 240), Color.GreenYellow);
 
             spriteBatch.End();
         }
